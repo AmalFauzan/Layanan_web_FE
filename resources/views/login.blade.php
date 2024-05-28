@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
     />
+    <title>Login Page</title>
   </head>
   <body>
     <div class="login">
@@ -44,7 +44,6 @@
         <div class="frame-container">
           <div class="image-7-parent">
             <img class="image-7-icon" alt="" src="./images/image-7@2x.png" />
-
             <div class="wrapper-rectangle-13">
               <img
                 class="wrapper-rectangle-13-child"
@@ -59,7 +58,6 @@
               alt=""
               src="./svg/rectangle-141.svg"
             />
-
             <div class="frame-div">
               <div class="login-wrapper">
                 <h2 class="login1">LOGIN</h2>
@@ -74,11 +72,11 @@
                         alt=""
                         src="./svg/usersolid-1.svg"
                       />
-
                       <input
                         class="frame-child"
                         placeholder="username"
                         type="text"
+                        id="username"
                       />
                     </div>
                   </div>
@@ -93,11 +91,11 @@
                         alt=""
                         src="./svg/keysolid-1.svg"
                       />
-
                       <input
                         class="frame-item"
                         placeholder="password"
-                        type="text"
+                        type="password"
+                        id="password"
                       />
                     </div>
                   </div>
@@ -116,7 +114,6 @@
         </div>
       </div>
     </div>
-
     <script src="./js/login.js"></script>
   </body>
 </html>
