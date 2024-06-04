@@ -105,6 +105,15 @@
                 </div>
                 <div class="recommended-item-card-item"></div>
               </div>
+              @if ($errors->any())
+              <div class="error-container">
+                  <ul>
+                      @foreach ($errors->all() as $error)
+                          <li>{{ $error }}</li>
+                      @endforeach
+                  </ul>
+              </div>
+              @endif
             </div>
           </div>
           <button class="rectangle-parent" type="submit">
@@ -116,15 +125,6 @@
           </button>
         </div>
       </form>
-      @if ($errors->any())
-          <div>
-              <ul>
-                  @foreach ($errors->all() as $error)
-                      <li>{{ $error }}</li>
-                  @endforeach
-              </ul>
-          </div>
-      @endif
       </div>
     </div>
   </div>
