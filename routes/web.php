@@ -1,18 +1,8 @@
 <?php
 
-use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FrontendController;
+use Illuminate\Support\Facades\Route;
 
-Route::get('login', [AuthController::class, 'showLoginForm'])->name('login');
-Route::post('login', [AuthController::class, 'login']);
-Route::post('logout', [AuthController::class, 'logout'])->name('logout');
-
-Route::get('dashboard', function () {
-    if (!Session::get('authenticated')) {
-        return redirect('login');
-    }
-    return view('dashboard');
-})->name('dashboard');
-
-Route::get('/profil', function () {
-    return view('profil');
-});
+Route::get('/login', [FrontendController::class, 'showLoginForm'])->name('login');
+Route::get('/dashboard', [FrontendController::class, 'showDashboard'])->name('dashboard');
+Route::post('/logout', [FrontendController::class, 'logout'])->name('logout');
