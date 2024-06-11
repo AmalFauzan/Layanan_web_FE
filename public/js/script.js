@@ -1,13 +1,25 @@
 document.getElementById('inputMenuBtn').addEventListener('click', function() {
-    document.getElementById('inputSection').style.display = 'block';
-    document.getElementById('tableSection').style.display = 'none';
+    showSection('inputSection');
 });
 
 document.getElementById('tableMenuBtn').addEventListener('click', function() {
-    document.getElementById('inputSection').style.display = 'none';
-    document.getElementById('tableSection').style.display = 'block';
+    showSection('tableSection');
     displayData();
 });
+
+document.getElementById('gradesMenuBtn').addEventListener('click', function() {
+    showSection('gradesSection');
+    displayGrades();
+});
+
+function showSection(sectionId) {
+    document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+        if (section.id === sectionId) {
+            section.classList.add('active');
+        }
+    });
+}
 
 document.getElementById('inputForm').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -51,18 +63,16 @@ document.getElementById('inputForm').addEventListener('submit', function(event) 
 
     displayData();
     this.reset();
-    document.getElementById('inputSection').style.display = 'none';
-    document.getElementById('tableSection').style.display = 'block';
+    showSection('tableSection');
 });
 
 function displayData() {
+    const storedData = JSON.parse(localStorage.getItem('lecturerData')) || [];
     const tableBody = document.querySelector('#dataTable tbody');
     tableBody.innerHTML = '';
 
-    let storedData = JSON.parse(localStorage.getItem('lecturerData')) || [];
     storedData.forEach((data, index) => {
-        let row = document.createElement('tr');
-
+        const row = document.createElement('tr');
         row.innerHTML = `
             <td>${data.nama}</td>
             <td>${data.nim}</td>
@@ -74,6 +84,7 @@ function displayData() {
             <td>
                 <button onclick="editData(${index})">Edit</button>
                 <button onclick="deleteData(${index})">Delete</button>
+                <button onclick="viewGrades(${index})">View Grades</button>
             </td>
         `;
         tableBody.appendChild(row);
@@ -105,9 +116,73 @@ function editData(index) {
     // Set values for other grades similarly
 
     document.getElementById('inputForm').dataset.editIndex = index;
-    document.getElementById('inputSection').style.display = 'block';
-    document.getElementById('tableSection').style.display = 'none';
+    showSection('inputSection');
+}
+
+function viewGrades(index) {
+    showSection('gradesSection');
+    const storedData = JSON.parse(localStorage.getItem('lecturerData'));
+    const data = storedData[index];
+    const gradesTableBody = document.querySelector('#gradesTable tbody');
+    gradesTableBody.innerHTML = `
+        <tr>
+            <td>${data.nama}</td>
+            <td>${data.nim}</td>
+            <td>${data.grades.kewarganegaraan}</td>
+            <td>${data.grades.kewirausahaan}</td>
+            <!-- Add other grade columns similarly -->
+            <td>
+                <button onclick="editData(${index})">Edit</button>
+                <button onclick="deleteData(${index})">Delete</button>
+            </td>
+        </tr>
+    `;
+}
+
+function displayGrades() {
+    const storedData = JSON.parse(localStorage.getItem('lecturerData')) || [];
+    const gradesTableBody = document.querySelector('#gradesTable tbody');
+    gradesTableBody.innerHTML = '';
+
+    storedData.forEach((data, index) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${data.nama}</td>
+            <td>${data.nim}</td>
+            <td>${data.grades.kewarganegaraan}</td>
+            <td>${data.grades.kewirausahaan}</td>
+            <!-- Add other grade columns similarly -->
+            <td>
+                <button onclick="editData(${index})">Edit</button>
+                <button onclick="deleteData(${index})">Delete</button>
+            </td>
+        `;
+        gradesTableBody.appendChild(row);
+    });
+}
+
+
+
+function displayGrades() {
+    const storedData = JSON.parse(localStorage.getItem('lecturerData')) || [];
+    const gradesTableBody = document.querySelector('#gradesTable tbody');
+    gradesTableBody.innerHTML = '';
+
+    storedData.forEach(data => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${data.nama}</td>
+            <td>${data.nim}</td>
+            <td>${data.grades.kewarganegaraan}</td>
+            <td>${data.grades.kewirausahaan}</td>
+            <!-- Add other grade columns similarly -->
+        `;
+        gradesTableBody.appendChild(row);
+    });
 }
 
 // Display data on page load
-document.addEventListener('DOMContentLoaded', displayData);
+document.addEventListener('DOMContentLoaded', function() {
+    displayData();
+    displayGrades();
+});

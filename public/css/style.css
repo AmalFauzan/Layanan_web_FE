@@ -41,6 +41,10 @@ nav button:hover {
     display: none;
 }
 
+.section.active {
+    display: block;
+}
+
 .form-group {
     margin-bottom: 15px;
 }

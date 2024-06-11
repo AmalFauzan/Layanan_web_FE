@@ -14,9 +14,10 @@
         <nav>
             <button id="inputMenuBtn">Input Data</button>
             <button id="tableMenuBtn">View Data</button>
+            <button id="gradesMenuBtn">View Grades</button>
         </nav>
         
-        <section id="inputSection" class="section">
+        <section id="inputSection" class="section active">
             <h2>Input Data Dosen</h2>
             <form id="inputForm">
                 <div class="form-group">
@@ -76,7 +77,7 @@
             </form>
         </section>
         
-        <section id="tableSection" class="section" style="display:none;">
+        <section id="tableSection" class="section">
             <h2>Data Tersimpan</h2>
             <table id="dataTable">
                 <thead>
@@ -96,6 +97,25 @@
                 </tbody>
             </table>
         </section>
+
+        <section id="gradesSection" class="section">
+            <h2>Data Nilai</h2>
+            <table id="gradesTable">
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>NIM</th>
+                        <th>Kewarganegaraan</th>
+                        <th>Kewirausahaan</th>
+                        <!-- Add headers for other subjects -->
+                        <th>Aksi</th> <!-- Added for edit and delete actions -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Grade data will be populated here by JavaScript -->
+                </tbody>
+            </table>
+        </section>        
     </div>
 
     <script src="./js/script.js"></script>
