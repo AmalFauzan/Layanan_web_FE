@@ -12,3 +12,11 @@ Route::post('/logout', [FrontendController::class, 'logout'])->name('logout');
 Route::get('/profil', function () {
     return view('profil');
 });
+
+Route::get('/dosen', function () {
+    return view('dosen');
+});
+
+Route::get('/tambah', function () {
+    return view('tambah');
+});
