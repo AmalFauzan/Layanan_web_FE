@@ -54,7 +54,7 @@
                 />
 
                 <div class="home-wrapper2">
-                  <div class="home6">Home</div>
+                  <div class="home6" id="Hometext" onclick="window.location.href='/dashboard';">Home</div>
                 </div>
               </div>
             </div>
@@ -71,7 +71,10 @@
             </button>
             <div class="rectangle-parent11">
               <div class="frame-child108" id="rectangle"></div>
-              <a class="logout6" id="logoutText">Logout</a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+              <a class="logout6" id="logoutText" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
             </div>
           </nav>
         </div>
