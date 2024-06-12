@@ -65,7 +65,7 @@
 
                             <img class="vector-icon1" alt="" src="./svg/vector.svg" />
 
-                            <div class="akun1">Akun</div>
+                            <div class="akun1" id="akunButton" onclick="window.location.href='/profil';">Akun</div>
                         </div>
                         <div class="rectangle-container">
                             <div class="frame-child4" id="rectangle"></div>

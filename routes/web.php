@@ -11,7 +11,7 @@ Route::post('/logout', [FrontendController::class, 'logout'])->name('logout');
 
 Route::get('/profil', function () {
     return view('profil');
-});
+})->name('profil');
 
 Route::get('/dosen', function () {
     return view('dosen');
