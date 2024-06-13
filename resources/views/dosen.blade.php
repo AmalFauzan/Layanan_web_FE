@@ -13,8 +13,10 @@
         </header>
         <nav>
             <button id="inputMenuBtn">Input Data</button>
+            <button id="inputgradesBtn">input Grades</button>
             <button id="tableMenuBtn">View Data</button>
             <button id="gradesMenuBtn">View Grades</button>
+            
         </nav>
         
         <section id="inputSection" class="section active">
@@ -53,23 +55,41 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="waliDosen">Wali Dosen:</label>
-                    <input type="text" id="waliDosen" required>
+                    <div class="form-group">
+                        <label for="WaliDosen">Wali Dosen:</label>
+                        <select id="WaliDosen" required>
+                            <option value="">Wali Dosen</option>
+                            <option value="ASO SUDIARJO. M.KOM.">ASO SUDIARJO. M.KOM.</option>
+                            <option value="RUDI HARTONO, ST., M.KOM.">RUDI HARTONO, ST., M.KOM.</option>
+                            <option value="YUSUF SUMARYANA, ST., M.KOM.">YUSUF SUMARYANA, ST., M.KOM.</option>
+                            <option value="IR. RUUHWAN, ST.,M.KOM.,CEH.,CHFI.">IR. RUUHWAN, ST.,M.KOM.,CEH.,CHFI.</option>
+                            <option value="MISSI HIKMATYAR, M.KOM.,CHFI.">MISSI HIKMATYAR, M.KOM.,CHFI.</option>
+                            <option value="AGUS SUPRIATMAN, ST., M.KOM.">AGUS SUPRIATMAN, ST., M.KOM.</option>
+                            <option value="TEGUH IKHLAS RAMADHAN, M.KOM.">TEGUH IKHLAS RAMADHAN, M.KOM.</option>
+                            <option value="EVI DEWI SRI MULYANI, S.KOM., M.KOM.">EVI DEWI SRI MULYANI, S.KOM., M.KOM.</option>
+                            <option value="SHINTA SITI SUNDARI, S.KOM., M.KOM.">SHINTA SITI SUNDARI, S.KOM., M.KOM.</option>
+                            <option value="TEUKU MUFIZAR, S.KOM., M.KOM.">TEUKU MUFIZAR, S.KOM., M.KOM.</option>
+                            <option value="DEDE SYAHRUL ANWAR, S.KOM., M.KOM.">DEDE SYAHRUL ANWAR, S.KOM., M.KOM.</option>
+                            <option value="CEPI RAHMAT HIDAYAT, S.KOM., M.KOM.">CEPI RAHMAT HIDAYAT, S.KOM., M.KOM.</option>
+                            <!-- Add more options as needed -->
+                        </select>
                 </div>
                 <div class="form-group">
-                    <label for="angkatan">Angkatan:</label>
-                    <input type="number" id="angkatan" min="2000" max="2100" required>
-                </div>
 
-                <h3>Input Nilai</h3>
-                <!-- Add input fields for each course -->
-                <div class="form-group">
-                    <label for="kewarganegaraan">Kewarganegaraan:</label>
-                    <input type="number" id="kewarganegaraan" min="0" max="100">
-                </div>
-                <div class="form-group">
-                    <label for="kewirausahaan">Kewirausahaan:</label>
-                    <input type="number" id="kewirausahaan" min="0" max="100">
+                    <label for="angkatan">Angkatan:</label>
+                    <select id="angkatan" required>
+                        <option value="">Tahun Masuk</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <!-- Add more options as needed -->
+                    </select>
+
                 </div>
                 <!-- Repeat similar divs for all other courses... -->
 
@@ -77,6 +97,314 @@
             </form>
         </section>
         
+
+                <section id="inputGradesSection" class="section">
+                <h2>Input Nilai</h2>
+                <form id="inputGradesForm">
+                <!-- Add input fields for each course -->
+                
+                <div class="form-group">
+                    <label for="kewarganegaraan">kewarganegaraan:</label>
+                    <select id="kewarganegaraan">
+                        <option value="">Nilai kewarganegaraan</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="kewirausahaan">kewirausahaan:</label>
+                    <select id="kewirausahaan">
+                        <option value="">Nilai kewirausahaan</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                       <option value="1">D</option>
+                       <option value="0">F</option>
+                       <!-- Add more options as needed -->
+                </select>
+            </div>
+    
+                <div class="form-group">
+                    <label for="indo">Bahasa Indonesia:</label>
+                    <select id="indo">
+                        <option value="">Nilai Bahasa Indonesia</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="inggris">Bahasa Inggris:</label>
+                    <select id="inggris">
+                        <option value="">Nilai Bahasa Inggris</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="kalkulus">Kalkulus:</label>
+                    <select id="kalkulus">
+                        <option value="">Nilai Kalkulus</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="aljabar">Aljabar:</label>
+                    <select id="aljabar">
+                        <option value="">Nilai Aljabar</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mtk">Matematika:</label>
+                    <select id="mtk">
+                        <option value="">Nilai Matematika</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="seni">Seni Budaya:</label>
+                    <select id="seni">
+                        <option value="">Nilai Seni Budaya</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="fisika">Fisika:</label>
+                    <select id="fisika">
+                        <option value="">Nilai Fisika</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="kimia">Kimia:</label>
+                    <select id="kimia">
+                        <option value="">Nilai Kimia</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="jarkom">Jaringan Komputer:</label>
+                    <select id="jarkom">
+                        <option value="">Nilai Jaringan Komputer</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="pemkom">Pemrograman Komputer:</label>
+                    <select id="pemkom">
+                        <option value="">Nilai Pemrograman Komputer</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="jarkom">Jaringan Komputer:</label>
+                    <select id="jarkom">
+                        <option value="">Nilai Jaringan Komputer</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="web">Layanan Web:</label>
+                    <select id="web">
+                        <option value="">Nilai Layanan Web</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="web">Layanan Web:</label>
+                    <select id="web">
+                        <option value="">Nilai Layanan Web</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="statistik">Statistik:</label>
+                    <select id="statistik">
+                        <option value="">Nilai Statistik</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="grafika">Grafika Komputer:</label>
+                    <select id="grafika">
+                        <option value="">Nilai Grafika Komputer</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mining">Data Mining:</label>
+                    <select id="mining">
+                        <option value="">Nilai Data Mining</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="algoritma">Algoritma:</label>
+                    <select id="algoritma">
+                        <option value="">Nilai Algoritma</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="sisdig">Sistem Digital:</label>
+                    <select id="sisdig">
+                        <option value="">Nilai Sistem Digital</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="kp">Kerja Praktek:</label>
+                    <select id="kp">
+                        <option value="">Nilai Kerja Praktek</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="kkn">Kuliah Kerja Nyata:</label>
+                    <select id="kkn">
+                        <option value="">Nilai Kuliah Kerja Nyata</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="skripsi">Skripsi:</label>
+                    <select id="skripsi">
+                        <option value="">Nilai Skripsi</option>
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+            </div>
+
+                
+
         <section id="tableSection" class="section">
             <h2>Data Tersimpan</h2>
             <table id="dataTable">
@@ -97,6 +425,7 @@
                 </tbody>
             </table>
         </section>
+        
 
         <section id="gradesSection" class="section">
             <h2>Data Nilai</h2>
@@ -108,7 +437,6 @@
                         <th>Kewarganegaraan</th>
                         <th>Kewirausahaan</th>
                         <!-- Add headers for other subjects -->
-                        <th>Aksi</th> <!-- Added for edit and delete actions -->
                     </tr>
                 </thead>
                 <tbody>
