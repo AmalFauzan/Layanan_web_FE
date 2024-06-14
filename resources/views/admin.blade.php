@@ -36,12 +36,12 @@
             <div class="frame-group">
                 <div class="simamik-wrapper">
                     <h1 class="simamik">
-                        <p class="simamik1">SIMAMIK</p>
+                        <div class="simamik1">SISKOMIK</div>
                     </h1>
                 </div>
                 <div class="system-info">
                     <div class="sistem-informasi-akademik">
-                        Sistem Informasi Akademik Universitas ABC
+                        SISTEM KELOLA AKADEMIK
                     </div>
                 </div>
                 <div class="frame-container">
@@ -63,7 +63,7 @@
                         />
                         <div class="frame-div">
                             <div class="login-wrapper">
-                                <h2 class="login1">LOGIN</h2>
+                                <h2 class="login1">LOGIN ADMIN</h2>
                             </div>
                             <div class="button-container-parent">
                                 <div class="button-container">
@@ -143,7 +143,7 @@
                         if (response.status) {
                             alert('Login successful!');
                             // Redirect to the dashboard
-                            window.location.href = '/dashboard';
+                            window.location.href = '/dosen';
                         } else {
                             $('#error-messages').html('<p>' + response.message + '</p>');
                         }

@@ -9,6 +9,10 @@ Route::get('/dashboard', [FrontendController::class, 'showDashboard'])->name('da
 
 Route::post('/logout', [FrontendController::class, 'logout'])->name('logout');
 
+Route::get('/admin', function () {
+    return view('admin');
+})->name('admin');
+
 Route::get('/profil', function () {
     return view('profil');
 })->name('profil');
