@@ -17,6 +17,10 @@ Route::get('/profil', function () {
     return view('profil');
 })->name('profil');
 
+Route::get('/jadwal', function () {
+    return view('jadwal');
+})->name('jadwal');
+
 Route::get('/dosen', function () {
     return view('dosen');
 });
