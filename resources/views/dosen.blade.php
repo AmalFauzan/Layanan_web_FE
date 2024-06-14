@@ -287,19 +287,6 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="web">Layanan Web:</label>
-                    <select id="web">
-                        <option value="">Nilai Layanan Web</option>
-                        <option value="4">A</option>
-                        <option value="3">B</option>
-                        <option value="2">C</option>
-                        <option value="1">D</option>
-                        <option value="0">F</option>
-                        <!-- Add more options as needed -->
-                    </select>
-                </div>
-
-                <div class="form-group">
                     <label for="statistik">Statistik:</label>
                     <select id="statistik">
                         <option value="">Nilai Statistik</option>
@@ -437,6 +424,26 @@
                         <th>NIM</th>
                         <th>Kewarganegaraan</th>
                         <th>Kewirausahaan</th>
+                        <th>Bahasa Indonesia</th>
+                        <th>Bahasa Inggris</th>
+                        <th>Kalkulus</th>
+                        <th>Aljabar</th>
+                        <th>Matematika</th>
+                        <th>Seni Budaya</th>
+                        <th>Fisika</th>
+                        <th>Kimia</th>
+                        <th>Jaringan Komputer</th>
+                        <th>Pemrograman Komputer</th>
+                        <th>Jaringan Komputer</th>
+                        <th>Layanan Web</th>
+                        <th>Statistik</th>
+                        <th>Grafika Komputer</th>
+                        <th>Data Mining</th>
+                        <th>Algoritma</th>
+                        <th>Sistem Digital</th>
+                        <th>Kerja Praktek</th>
+                        <th>Kuliah Kerja Nyata</th>
+                        <th>Skripsi</th>
                         <!-- Add headers for other subjects -->
                     </tr>
                 </thead>

@@ -21,6 +21,10 @@ Route::get('/jadwal', function () {
     return view('jadwal');
 })->name('jadwal');
 
+Route::get('/nilai', function () {
+    return view('nilai');
+})->name('nilai');
+
 Route::get('/dosen', function () {
     return view('dosen');
 });
