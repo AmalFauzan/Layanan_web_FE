@@ -21,27 +21,27 @@
         </nav>
         
         <section id="inputSection" class="section active">
-            <h2>Input Data Dosen</h2>
+            <h2>Input Data Mahasiswa</h2>
             <form id="inputForm">
                 <div class="form-group">
                     <label for="nama">Nama:</label>
-                    <input type="text" id="nama" required>
+                    <input type="text" id="nama" name="nama" required>
                 </div>
                 <div class="form-group">
                     <label for="nim">NIM:</label>
-                    <input type="text" id="nim" required>
+                    <input type="text" id="nim" name="nim" required>
                 </div>
                 <div class="form-group">
                     <label for="username">Username:</label>
-                    <input type="text" id="username" required>
+                    <input type="text" id="username" name="username" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Password:</label>
-                    <input type="text" id="password" required>
+                    <input type="text" id="password" name="password" required>
                 </div>
                 <div class="form-group">
                     <label for="fakultas">Fakultas:</label>
-                    <select id="fakultas" required>
+                    <select id="fakultas" name="fakultas" required>
                         <option value="Teknik">Teknik</option>
                         <option value="Ekonomi">Ekonomi</option>
                         <!-- Add more options as needed -->
@@ -49,36 +49,34 @@
                 </div>
                 <div class="form-group">
                     <label for="programStudi">Program Studi:</label>
-                    <select id="programStudi" required>
+                    <select id="programStudi" name="program_studi" required>
                         <option value="Informatika">Informatika</option>
                         <option value="Manajemen">Manajemen</option>
                         <!-- Add more options as needed -->
                     </select>
                 </div>
                 <div class="form-group">
-                    <div class="form-group">
-                        <label for="WaliDosen">Wali Dosen:</label>
-                        <select id="WaliDosen" required>
-                            <option value="">Wali Dosen</option>
-                            <option value="ASO SUDIARJO. M.KOM.">ASO SUDIARJO. M.KOM.</option>
-                            <option value="RUDI HARTONO, ST., M.KOM.">RUDI HARTONO, ST., M.KOM.</option>
-                            <option value="YUSUF SUMARYANA, ST., M.KOM.">YUSUF SUMARYANA, ST., M.KOM.</option>
-                            <option value="IR. RUUHWAN, ST.,M.KOM.,CEH.,CHFI.">IR. RUUHWAN, ST.,M.KOM.,CEH.,CHFI.</option>
-                            <option value="MISSI HIKMATYAR, M.KOM.,CHFI.">MISSI HIKMATYAR, M.KOM.,CHFI.</option>
-                            <option value="AGUS SUPRIATMAN, ST., M.KOM.">AGUS SUPRIATMAN, ST., M.KOM.</option>
-                            <option value="TEGUH IKHLAS RAMADHAN, M.KOM.">TEGUH IKHLAS RAMADHAN, M.KOM.</option>
-                            <option value="EVI DEWI SRI MULYANI, S.KOM., M.KOM.">EVI DEWI SRI MULYANI, S.KOM., M.KOM.</option>
-                            <option value="SHINTA SITI SUNDARI, S.KOM., M.KOM.">SHINTA SITI SUNDARI, S.KOM., M.KOM.</option>
-                            <option value="TEUKU MUFIZAR, S.KOM., M.KOM.">TEUKU MUFIZAR, S.KOM., M.KOM.</option>
-                            <option value="DEDE SYAHRUL ANWAR, S.KOM., M.KOM.">DEDE SYAHRUL ANWAR, S.KOM., M.KOM.</option>
-                            <option value="CEPI RAHMAT HIDAYAT, S.KOM., M.KOM.">CEPI RAHMAT HIDAYAT, S.KOM., M.KOM.</option>
-                            <!-- Add more options as needed -->
-                        </select>
+                    <label for="WaliDosen">Wali Dosen:</label>
+                    <select id="WaliDosen" name="wali_dosen" required>
+                        <option value="">Wali Dosen</option>
+                        <option value="ASO SUDIARJO. M.KOM.">ASO SUDIARJO. M.KOM.</option>
+                        <option value="RUDI HARTONO, ST., M.KOM.">RUDI HARTONO, ST., M.KOM.</option>
+                        <option value="YUSUF SUMARYANA, ST., M.KOM.">YUSUF SUMARYANA, ST., M.KOM.</option>
+                        <option value="IR. RUUHWAN, ST.,M.KOM.,CEH.,CHFI.">IR. RUUHWAN, ST.,M.KOM.,CEH.,CHFI.</option>
+                        <option value="MISSI HIKMATYAR, M.KOM.,CHFI.">MISSI HIKMATYAR, M.KOM.,CHFI.</option>
+                        <option value="AGUS SUPRIATMAN, ST., M.KOM.">AGUS SUPRIATMAN, ST., M.KOM.</option>
+                        <option value="TEGUH IKHLAS RAMADHAN, M.KOM.">TEGUH IKHLAS RAMADHAN, M.KOM.</option>
+                        <option value="EVI DEWI SRI MULYANI, S.KOM., M.KOM.">EVI DEWI SRI MULYANI, S.KOM., M.KOM.</option>
+                        <option value="SHINTA SITI SUNDARI, S.KOM., M.KOM.">SHINTA SITI SUNDARI, S.KOM., M.KOM.</option>
+                        <option value="TEUKU MUFIZAR, S.KOM., M.KOM.">TEUKU MUFIZAR, S.KOM., M.KOM.</option>
+                        <option value="DEDE SYAHRUL ANWAR, S.KOM., M.KOM.">DEDE SYAHRUL ANWAR, S.KOM., M.KOM.</option>
+                        <option value="CEPI RAHMAT HIDAYAT, S.KOM., M.KOM.">CEPI RAHMAT HIDAYAT, S.KOM., M.KOM.</option>
+                        <!-- Add more options as needed -->
+                    </select>
                 </div>
                 <div class="form-group">
-
                     <label for="angkatan">Angkatan:</label>
-                    <select id="angkatan" required>
+                    <select id="angkatan" name="angkatan" required>
                         <option value="">Tahun Masuk</option>
                         <option value="2018">2018</option>
                         <option value="2019">2019</option>
@@ -90,18 +88,17 @@
                         <option value="2025">2025</option>
                         <!-- Add more options as needed -->
                     </select>
-
                 </div>
-                <!-- Repeat similar divs for all other courses... -->
-
                 <button type="submit">Submit</button>
             </form>
+            
         </section>
         
 
                 <section id="inputGradesSection" class="section">
                 <h2>Input Nilai</h2>
                 <form id="inputGradesForm">
+                <input type="hidden" id="student_id" name="student_id">
                 <!-- Add input fields for each course -->
                 
                 <div class="form-group">
