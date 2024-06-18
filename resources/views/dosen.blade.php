@@ -98,7 +98,8 @@
                 <section id="inputGradesSection" class="section">
                 <h2>Input Nilai</h2>
                 <form id="inputGradesForm">
-                <input type="hidden" id="student_id" name="student_id">
+                <label for="Nama">Nama Mahasiswa:</label>
+                <input type="show" id="student_id" name="student_id">
                 <!-- Add input fields for each course -->
                 
                 <div class="form-group">
@@ -385,6 +386,7 @@
                         <option value="0">F</option>
                         <!-- Add more options as needed -->
                     </select>
+                    <button type="submit">Submit</button>
                 </div>
             </div>
 
