@@ -96,10 +96,15 @@
         
 
                 <section id="inputGradesSection" class="section">
-                <h2>Input Nilai</h2>
-                <form id="inputGradesForm">
-                <label for="Nama">Nama Mahasiswa:</label>
-                <input type="show" id="student_id" name="student_id">
+                    <h2>Input Nilai</h2>
+                    <form id="inputGradesForm">
+                        <div class="form-group">
+                            <label for="nims">NIM:</label>
+                                <select id="nims" name="nim" required>
+                                <option value="">Select NIM</option>
+                                <!-- NIM options will be populated here by JavaScript -->
+                            </select>
+                        </div>
                 <!-- Add input fields for each course -->
                 <div class="form-group">
                     <label for="matkul">Mata Kuliah :</label>
@@ -124,8 +129,8 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="Nilai">Nilai:</label>
-                    <select id="Nilai" name="Nilai" required>
+                    <label for="nilai">Nilai:</label>
+                    <select id="nilai" name="nilai" required>
                         <option value="">Nilai Matkul</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -166,36 +171,17 @@
                     <tr>
                         <th>Nama</th>
                         <th>NIM</th>
-                        <th>Kewarganegaraan</th>
-                        <th>Kewirausahaan</th>
-                        <th>Bahasa Indonesia</th>
-                        <th>Bahasa Inggris</th>
-                        <th>Kalkulus</th>
-                        <th>Aljabar</th>
-                        <th>Matematika</th>
-                        <th>Seni Budaya</th>
-                        <th>Fisika</th>
-                        <th>Kimia</th>
-                        <th>Jaringan Komputer</th>
-                        <th>Pemrograman Komputer</th>
-                        <th>Jaringan Komputer</th>
-                        <th>Layanan Web</th>
-                        <th>Statistik</th>
-                        <th>Grafika Komputer</th>
-                        <th>Data Mining</th>
-                        <th>Algoritma</th>
-                        <th>Sistem Digital</th>
-                        <th>Kerja Praktek</th>
-                        <th>Kuliah Kerja Nyata</th>
-                        <th>Skripsi</th>
-                        <!-- Add headers for other subjects -->
+                        <th>Mata Kuliah</th>
+                        <th>Nilai</th>
+                        <!-- Add headers for other subjects dynamically if needed -->
                     </tr>
                 </thead>
                 <tbody>
                     <!-- Grade data will be populated here by JavaScript -->
                 </tbody>
             </table>
-        </section>        
+        </section>
+             
     </div>
 
     <script src="./js/script.js"></script>
