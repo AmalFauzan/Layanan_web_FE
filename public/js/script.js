@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const dataTable = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
     const gradesTable = document.getElementById('gradesTable').getElementsByTagName('tbody')[0];
     const nimsSelect = document.getElementById('nims');
+    const filterMatkul = document.getElementById('filterMatkul');
+    const filterNilai = document.getElementById('filterNilai');
+    const applyFiltersBtn = document.getElementById('applyFiltersBtn');
+    let gradesData = [];
 
     inputMenuBtn.addEventListener('click', function() {
         inputSection.classList.add('active');
@@ -126,14 +130,8 @@ document.addEventListener('DOMContentLoaded', function() {
         fetch('http://localhost:8001/api/students/grades')
             .then(response => response.json())
             .then(data => {
-                gradesTable.innerHTML = '';
-                data.forEach(grade => {
-                    const row = gradesTable.insertRow();
-                    row.insertCell(0).textContent = grade.student.nama;
-                    row.insertCell(1).textContent = grade.student.nim;
-                    row.insertCell(2).textContent = grade.matkul;
-                    row.insertCell(3).textContent = grade.nilai;
-                });
+                gradesData = data; // Save fetched data for filtering
+                displayGradesData(gradesData);
             }).catch(error => {
                 console.error('Error fetching grades:', error);
             });
@@ -154,5 +152,54 @@ document.addEventListener('DOMContentLoaded', function() {
             }).catch(error => {
                 console.error('Error fetching NIMs:', error);
             });
+    }
+
+    function displayGradesData(data) {
+        gradesTable.innerHTML = '';
+        data.forEach(grade => {
+            const row = gradesTable.insertRow();
+            row.insertCell(0).textContent = grade.student.nama;
+            row.insertCell(1).textContent = grade.student.nim;
+            row.insertCell(2).textContent = grade.matkul;
+            row.insertCell(3).textContent = grade.nilai;
+        });
+    }
+
+    function filterGradesData() {
+        const selectedMatkul = filterMatkul.value;
+        const selectedNilai = filterNilai.value;
+        let filteredData = gradesData;
+
+        if (selectedMatkul) {
+            filteredData = filteredData.filter(grade => grade.matkul === selectedMatkul);
+        }
+
+        if (selectedNilai) {
+            filteredData = filteredData.filter(grade => grade.nilai === parseInt(selectedNilai, 10));
+        }
+
+        displayGradesData(filteredData);
+    }
+
+    applyFiltersBtn.addEventListener('click', filterGradesData);
+
+    document.querySelectorAll('#gradesTable thead th[data-sort]').forEach(th => {
+        th.addEventListener('click', function() {
+            const sortKey = th.getAttribute('data-sort');
+            sortGradesData(sortKey);
+        });
+    });
+
+    function sortGradesData(sortKey) {
+        gradesData.sort((a, b) => {
+            if (a.student[sortKey] < b.student[sortKey]) {
+                return -1;
+            }
+            if (a.student[sortKey] > b.student[sortKey]) {
+                return 1;
+            }
+            return 0;
+        });
+        displayGradesData(gradesData);
     }
 });

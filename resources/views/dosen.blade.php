@@ -166,14 +166,46 @@
 
         <section id="gradesSection" class="section">
             <h2>Data Nilai</h2>
+            <div class="filters">
+                <label for="filterMatkul">Filter by Mata Kuliah:</label>
+                <select id="filterMatkul">
+                    <option value="">All Mata Kuliah</option>
+                    <option value="Kewarnegaraan">Kewarnegaraan</option>
+                    <option value="Kewirausahaan">Kewirausahaan</option>
+                    <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+                    <option value="Bahasa Inggris">Bahasa Inggris</option>
+                    <option value="Kalkulus">Kalkulus</option>
+                    <option value="Aljabar">Aljabar</option>
+                    <option value="Matematika">Matematika</option>
+                    <option value="Fisika">Fisika</option>
+                    <option value="Seni Budaya">Seni Budaya</option>
+                    <option value="Jaringan Komputer">Jaringan Komputer</option>
+                    <option value="Data Mining">Data Mining</option>
+                    <option value="Programming">Programming</option>
+                    <option value="Kerja Praktek">Kerja Praktek</option>
+                    <option value="KKN">KKN</option>
+                    <option value="SKRIPSI">SKRIPSI</option>
+                </select>
+                
+                <label for="filterNilai">Filter by Nilai:</label>
+                <select id="filterNilai">
+                    <option value="">All Nilai</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                
+                <button id="applyFiltersBtn">Apply Filters</button>
+            </div>
+            
             <table id="gradesTable">
                 <thead>
                     <tr>
-                        <th>Nama</th>
-                        <th>NIM</th>
-                        <th>Mata Kuliah</th>
+                        <th data-sort="nama">Nama</th>
+                        <th data-sort="nim">NIM</th>
+                        <th data-sort="matkul">Mata Kuliah</th>
                         <th>Nilai</th>
-                        <!-- Add headers for other subjects dynamically if needed -->
                     </tr>
                 </thead>
                 <tbody>
@@ -181,6 +213,8 @@
                 </tbody>
             </table>
         </section>
+        
+        
              
     </div>
 
