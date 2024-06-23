@@ -12,9 +12,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const dataTable = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
     const gradesTable = document.getElementById('gradesTable').getElementsByTagName('tbody')[0];
     const nimsSelect = document.getElementById('nims');
-    const filterMatkul = document.getElementById('filterMatkul');
-    const filterNilai = document.getElementById('filterNilai');
+    const filterFakultas = document.getElementById('filterFakultas');
+    const filterProgramStudi = document.getElementById('filterProgramStudi');
+    const filterAngkatan = document.getElementById('filterAngkatan');
     const applyFiltersBtn = document.getElementById('applyFiltersBtn');
+    let studentData = [];
     let gradesData = [];
     let currentStudentId = null;
 
@@ -125,21 +127,10 @@ document.addEventListener('DOMContentLoaded', function() {
         fetch('http://localhost:8001/api/students')
             .then(response => response.json())
             .then(data => {
-                dataTable.innerHTML = '';
-                data.forEach(student => {
-                    const row = dataTable.insertRow();
-                    row.insertCell(0).innerText = student.nama;
-                    row.insertCell(1).innerText = student.nim;
-                    row.insertCell(2).innerText = student.username;
-                    row.insertCell(3).innerText = student.fakultas;
-                    row.insertCell(4).innerText = student.program_studi;
-                    row.insertCell(5).innerText = student.wali_dosen;
-                    row.insertCell(6).innerText = student.angkatan;
-                    row.insertCell(7).innerHTML = `
-                        <button class="edit-btn" data-id="${student.id}">Edit</button>
-                        <button class="delete-btn" data-id="${student.id}">Delete</button>`;
-                });
-                addEditDeleteListeners();
+                studentData = data; // Save fetched data for filtering
+                displayStudentData(studentData);
+            }).catch(error => {
+                console.error('Error fetching students:', error);
             });
     }
 
@@ -171,6 +162,24 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
+    function displayStudentData(data) {
+        dataTable.innerHTML = '';
+        data.forEach(student => {
+            const row = dataTable.insertRow();
+            row.insertCell(0).innerText = student.nama;
+            row.insertCell(1).innerText = student.nim;
+            row.insertCell(2).innerText = student.username;
+            row.insertCell(3).innerText = student.fakultas;
+            row.insertCell(4).innerText = student.program_studi;
+            row.insertCell(5).innerText = student.wali_dosen;
+            row.insertCell(6).innerText = student.angkatan;
+            row.insertCell(7).innerHTML = `
+                <button class="edit-btn" data-id="${student.id}">Edit</button>
+                <button class="delete-btn" data-id="${student.id}">Delete</button>`;
+        });
+        addEditDeleteListeners();
+    }
+
     function displayGradesData(data) {
         gradesTable.innerHTML = '';
         data.forEach(grade => {
@@ -180,6 +189,29 @@ document.addEventListener('DOMContentLoaded', function() {
             row.insertCell(2).textContent = grade.matkul;
             row.insertCell(3).textContent = grade.nilai;
         });
+    }
+
+    function filterStudentData() {
+        const selectedFakultas = filterFakultas.value;
+        const selectedProgramStudi = filterProgramStudi.value;
+        const selectedAngkatan = filterAngkatan.value;
+        let filteredData = studentData;
+
+        console.log('Filtering by:', { selectedFakultas, selectedProgramStudi, selectedAngkatan }); // Debugging step
+
+        if (selectedFakultas) {
+            filteredData = filteredData.filter(student => student.fakultas === selectedFakultas);
+        }
+
+        if (selectedProgramStudi) {
+            filteredData = filteredData.filter(student => student.program_studi === selectedProgramStudi);
+        }
+
+        if (selectedAngkatan) {
+            filteredData = filteredData.filter(student => student.angkatan === parseInt(selectedAngkatan));
+        }
+
+        displayStudentData(filteredData);
     }
 
     function filterGradesData() {
@@ -198,7 +230,13 @@ document.addEventListener('DOMContentLoaded', function() {
         displayGradesData(filteredData);
     }
 
-    applyFiltersBtn.addEventListener('click', filterGradesData);
+    applyFiltersBtn.addEventListener('click', function() {
+        if (tableSection.classList.contains('active')) {
+            filterStudentData();
+        } else if (gradesSection.classList.contains('active')) {
+            filterGradesData();
+        }
+    });
 
     document.querySelectorAll('#gradesTable thead th[data-sort]').forEach(th => {
         th.addEventListener('click', function() {

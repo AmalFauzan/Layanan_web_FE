@@ -93,7 +93,6 @@
             </form>
             
         </section>
-        
 
                 <section id="inputGradesSection" class="section">
                     <h2>Input Nilai</h2>
@@ -142,28 +141,60 @@
                 <button type="submit">Submit</button>
             </div>
 
-        <section id="tableSection" class="section">
-            <h2>Data Tersimpan</h2>
-            <table id="dataTable">
-                <thead>
-                    <tr>
-                        <th>Nama</th>
-                        <th>NIM</th>
-                        <th>Username</th>
-                        <th>Fakultas</th>
-                        <th>Program Studi</th>
-                        <th>Wali Dosen</th>
-                        <th>Angkatan</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Data will be populated here by JavaScript -->
-                </tbody>
-            </table>
-        </section>
+            <section id="tableSection" class="section">
+                <h2>Data Tersimpan</h2>
+                <div class="filters">
+                    <label for="filterFakultas">Filter by Fakultas:</label>
+                    <select id="filterFakultas">
+                        <option value="">All Fakultas</option>
+                        <option value="Teknik">Teknik</option>
+                        <option value="Ekonomi">Ekonomi</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    
+                    <label for="filterProgramStudi">Filter by Program Studi:</label>
+                    <select id="filterProgramStudi">
+                        <option value="">All Program Studi</option>
+                        <option value="Informatika">Informatika</option>
+                        <option value="Manajemen">Manajemen</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    
+                    <label for="filterAngkatan">Filter by Angkatan:</label>
+                    <select id="filterAngkatan">
+                        <option value="">All Angkatan</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    
+                    <button id="applyFiltersBtn">Apply Filters</button>
+                </div>
+                
+                <table id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>NIM</th>
+                            <th>Username</th>
+                            <th>Fakultas</th>
+                            <th>Program Studi</th>
+                            <th>Wali Dosen</th>
+                            <th>Angkatan</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be populated here by JavaScript -->
+                    </tbody>
+                </table>
+            </section>                        
         
-
         <section id="gradesSection" class="section">
             <h2>Data Nilai</h2>
             <div class="filters">
@@ -212,10 +243,7 @@
                     <!-- Grade data will be populated here by JavaScript -->
                 </tbody>
             </table>
-        </section>
-        
-        
-             
+        </section>     
     </div>
 
     <script src="./js/script.js"></script>
