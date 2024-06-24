@@ -229,7 +229,7 @@
                 
                 <button id="applyFiltersBtn">Apply Filters</button>
             </div>
-            
+
             <table id="gradesTable">
                 <thead>
                     <tr>

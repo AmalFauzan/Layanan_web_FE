@@ -15,7 +15,7 @@
     <div class="akun6">
       <header class="frame-parent47">
         <div class="wrapper-group-51-wrapper">
-          <div class="wrapper-group-511">
+          <div class="wrapper-group-511" onclick="showPopup()">
             <img
               class="wrapper-group-51-item"
               loading="lazy"
@@ -167,11 +167,6 @@
               <div class="daftar-nilai-wrapper">
                 <div class="daftar-nilai" id="popupdAFTARNILAIText">
                   DAFTAR NILAI
-                </div>
-              </div>
-              <div class="presensi-mahasiswa-wrapper">
-                <div class="presensi-mahasiswa" id="popuppRESENSIMAHASISWAText">
-                  PRESENSI MAHASISWA
                 </div>
               </div>
               <div class="frame-parent8">

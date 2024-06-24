@@ -15,7 +15,7 @@
         <header class="pengumuman-1-inner">
             <div class="frame-parent5">
                 <div class="wrapper-group-50-wrapper">
-                    <div class="wrapper-group-50">
+                    <div class="wrapper-group-50" onclick="showPopup()">
                         <img
                             class="wrapper-group-50-child"
                             alt=""
@@ -157,11 +157,6 @@
                                 DAFTAR NILAI
                             </div>
                         </div>
-                        <div class="presensi-mahasiswa-wrapper">
-                            <div class="presensi-mahasiswa" id="popuppRESENSIMAHASISWAText">
-                                PRESENSI MAHASISWA
-                            </div>
-                        </div>
                         <div class="frame-parent10">
                             <div class="jadwal-matakuliah-wrapper">
                                 <div class="jadwal-matakuliah" id="popupjADWALMATAKULIAHText">
@@ -248,5 +243,6 @@
             </main>
         </div>
     </div>
+    <script src="./js/dashboard.js"></script>
 </body>
 </html>

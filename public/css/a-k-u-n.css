@@ -536,7 +536,9 @@
 .wrapper-rectangle-13-parent2 {
   width: 731px;
   justify-content: flex-start;
-  position: relative;
+  position: absolute;
+  top: 250px; /* Adjust top position in pixels */
+  left: 1000px;
 }
 .akun-inner {
   width: 1661px;

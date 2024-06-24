@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="jadwal">
-      <div class="wrapper-rectangle-136">
+      <div class="wrapper-rectangle-136" onclick="showPopup()">
         <img
           class="wrapper-rectangle-13-child4"
           alt=""
@@ -202,6 +202,6 @@
       </div>
     </div>
 
-    <script></script>
+    <script src="./js/nilai.js"></script>
   </body>
 </html>
