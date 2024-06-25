@@ -73,7 +73,7 @@
               <div class="frame-child108" id="rectangle"></div>
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
-            </form>
+              </form>
               <a class="logout6" id="logoutText" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
             </div>
           </nav>
@@ -175,7 +175,7 @@
                     JADWAL MATAKULIAH
                   </div>
                 </div>
-                <div class="frame-child11"></div>
+                
               </div>
               <div class="frame-wrapper8">
                 <div class="dokumen-parent">
@@ -198,7 +198,7 @@
                     PEMBAYARAN
                   </div>
                 </div>
-                <div class="frame-child12"></div>
+                
               </div>
               <div class="frame-parent10">
                 <div class="hubungi-jurusan-wrapper">
@@ -212,7 +212,7 @@
                     company.network@outlook.com
                   </div>
                 </div>
-                <div class="frame-child13"></div>
+                
               </div>
               <div class="about-us-wrapper">
                 <div class="about-us2">ABOUT US</div>
@@ -224,7 +224,6 @@
           <div class="visi-misi" id="popupvISIMISIText">VISI MISI</div>
         </div>
         <div class="rectangle-wrapper">
-          <div class="frame-child14"></div>
         </div>
         <main class="tab-component-parent">
           <section class="tab-component">

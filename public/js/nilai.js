@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById('framePopup').addEventListener('click', hidePopup);
 
     // For demonstration, attach the showPopup function to the click event of the triggering element
-    document.querySelector('.wrapper-rectangle-136').addEventListener('click', showPopup);
+    document.querySelector('.wrapper-rectangle-31').addEventListener('click', showPopup);
     document.getElementById('popupjADWALMATAKULIAHText').addEventListener('click', redirectToJadwal);
     document.getElementById('popupdAFTARNILAIText').addEventListener('click', redirectToNilai);
     document.getElementById('popupvISIMISIText').addEventListener('click', redirectToVisi);

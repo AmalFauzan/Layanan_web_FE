@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="jadwal">
-      <div class="wrapper-rectangle-136" onclick="showPopup()">
+      <div class="wrapper-rectangle-136">
         <img
           class="wrapper-rectangle-13-child4"
           alt=""
@@ -27,7 +27,7 @@
         id="rectangle1"
       />
 
-      <div class="wrapper-rectangle-31">
+      <div class="wrapper-rectangle-31"onclick="showPopup()">
         <img
           class="wrapper-rectangle-31-child"
           alt=""
@@ -43,7 +43,10 @@
       </div>
       <div class="rectangle-parent12">
         <div class="frame-child110" id="rectangle"></div>
-        <a class="logout7" id="logoutText">Logout</a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+          @csrf
+        </form>
+        <a class="logout7" id="logoutText" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
       </div>
       <div class="jadwal-matakuliah-parent">
         <h2 class="jadwal-matakuliah1">NILAI MATAKULIAH</h2>
@@ -76,14 +79,12 @@
         <img class="frame-child111" alt="" src="./svg/rectangle-89.svg" />
 
         <img class="vector-icon9" alt="" src="./svg/vector.svg" />
-
-        <a class="akun8">Akun</a>
+        <div class="akun8" id="akunButton" onclick="window.location.href='/profil';">Akun</div>
       </button>
       <div class="frame-parent49" id="groupContainer2">
         <div class="vector-parent22" id="groupContainer">
           <img class="frame-child112" alt="" src="./svg/rectangle-89.svg" />
-
-          <a class="home7">Home</a>
+          <div class="home7" id="Hometext" onclick="window.location.href='/dashboard';">Home</div>
         </div>
         <img
           class="grommet-iconsannounce7"
@@ -110,18 +111,12 @@
                   DAFTAR NILAI
                 </div>
               </div>
-              <div class="presensi-mahasiswa-wrapper">
-                <div class="presensi-mahasiswa" id="popuppRESENSIMAHASISWAText">
-                  PRESENSI MAHASISWA
-                </div>
-              </div>
               <div class="frame-parent8">
                 <div class="jadwal-matakuliah-wrapper">
                   <div class="jadwal-matakuliah" id="popupjADWALMATAKULIAHText">
                     JADWAL MATAKULIAH
                   </div>
                 </div>
-                <div class="frame-child11"></div>
               </div>
               <div class="frame-wrapper8">
                 <div class="dokumen-parent">
@@ -144,7 +139,6 @@
                     PEMBAYARAN
                   </div>
                 </div>
-                <div class="frame-child12"></div>
               </div>
               <div class="frame-parent10">
                 <div class="hubungi-jurusan-wrapper">
@@ -158,7 +152,6 @@
                     company.network@outlook.com
                   </div>
                 </div>
-                <div class="frame-child13"></div>
               </div>
               <div class="about-us-wrapper">
                 <div class="about-us2">ABOUT US</div>
@@ -170,7 +163,6 @@
           <div class="visi-misi" id="popupvISIMISIText">VISI MISI</div>
         </div>
         <div class="rectangle-wrapper">
-          <div class="frame-child14"></div>
         </div>
         <main class="tab-component-parent">
           <section class="tab-component">

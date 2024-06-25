@@ -26,6 +26,13 @@
   left: 35.7px;
   display: none;
 }
+.schedule-container {
+  position: relative;
+  z-index: 2; /* Nilai z-index lebih tinggi */
+}
+.schedule-table, .schedule-table th, .schedule-table td {
+  color: black; /* Mengatur warna teks menjadi hitam */
+}
 .wrapper-rectangle-31-child {
   width: 100%;
   height: 100%;
@@ -63,6 +70,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1; 
 }
 .frame-child110,
 .logout7 {

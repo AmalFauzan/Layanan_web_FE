@@ -78,9 +78,9 @@
                                             <input
                                                 class="frame-child"
                                                 placeholder="username"
-                                                type="email"
-                                                name="email"
-                                                id="email" required>
+                                                type="username"
+                                                name="username"
+                                                id="username" required>
                                         </div>
                                     </div>
                                     <div class="input-border"></div>
@@ -128,15 +128,15 @@
                 // Clear previous error messages
                 $('#error-messages').empty();
 
-                var email = $('#email').val();
+                var username = $('#username').val();
                 var password = $('#password').val();
 
                 $.ajax({
                     url: 'http://127.0.0.1:8001/api/login',
                     method: 'POST',
                     data: {
-                        _token: $('input[name="_token"]').val(),
-                        email: email,
+
+                        username: username,
                         password: password
                     },
                     success: function(response) {
