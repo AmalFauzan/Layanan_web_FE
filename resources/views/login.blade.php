@@ -135,7 +135,6 @@
                     url: 'http://127.0.0.1:8001/api/login',
                     method: 'POST',
                     data: {
-
                         username: username,
                         password: password
                     },
