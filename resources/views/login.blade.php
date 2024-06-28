@@ -120,46 +120,48 @@
         </div>
     </form>
 
-    <script>
-        $(document).ready(function() {
-            $('#login-form').on('submit', function(event) {
-                event.preventDefault(); // Prevent default form submission
+<script>
+    $(document).ready(function() {
+        $('#login-form').on('submit', function(event) {
+            event.preventDefault();
 
-                // Clear previous error messages
-                $('#error-messages').empty();
+            $('#error-messages').empty();
 
-                var username = $('#username').val();
-                var password = $('#password').val();
+            var username = $('#username').val();
+            var password = $('#password').val();
 
-                $.ajax({
-                    url: 'http://127.0.0.1:8001/api/login',
-                    method: 'POST',
-                    data: {
-                        username: username,
-                        password: password
-                    },
-                    success: function(response) {
-                        if (response.status) {
-                            alert('Login successful!');
-                            // Redirect to the dashboard
-                            window.location.href = '/dashboard';
-                        } else {
-                            $('#error-messages').html('<p>' + response.message + '</p>');
-                        }
-                    },
-                    error: function(xhr) {
-                        var errors = xhr.responseJSON.errors;
-                        var errorMessages = '';
-                        for (var key in errors) {
-                            if (errors.hasOwnProperty(key)) {
-                                errorMessages += '<p>' + errors[key] + '</p>';
-                            }
-                        }
-                        $('#error-messages').html(errorMessages);
+            $.ajax({
+                url: 'http://127.0.0.1:8001/api/login',
+                method: 'POST',
+                data: {
+                    username: username,
+                    password: password
+                },
+                success: function(response) {
+                    if (response.status) {
+                        alert('Login successful!');
+                        // Store the student data in localStorage
+                        localStorage.setItem('student', JSON.stringify(response.student));
+                        // Redirect to the profile page
+                        window.location.href = '/dashboard';
+                    } else {
+                        $('#error-messages').html('<p>' + response.message + '</p>');
                     }
-                });
+                },
+                error: function(xhr) {
+                    var errors = xhr.responseJSON.errors;
+                    var errorMessages = '';
+                    for (var key in errors) {
+                        if (errors.hasOwnProperty(key)) {
+                            errorMessages += '<p>' + errors[key] + '</p>';
+                        }
+                    }
+                    $('#error-messages').html(errorMessages);
+                }
             });
         });
-    </script>
+    });
+</script>
+
 </body>
 </html>

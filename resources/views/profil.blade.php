@@ -79,15 +79,15 @@
           </nav>
         </div>
       </header>
-        <div class="wrapper-rectangle-13-parent2">
-          <div class="wrapper-rectangle-135">
+      <div class="wrapper-rectangle-13-parent2">
+        <div class="wrapper-rectangle-135">
             <img
               class="wrapper-rectangle-13-child3"
               alt=""
               src="./svg/rectangle-131.svg"
             />
-          </div>
-          <div class="vector-parent19">
+        </div>
+        <div class="vector-parent19">
             <img
               class="frame-child109"
               alt=""
@@ -95,62 +95,65 @@
             />
 
             <section class="frame-section">
-              <nav class="frame-parent48">
-                <div class="nama-wrapper">
-                  <div class="nama">Nama</div>
-                </div>
-                <div class="input-fields">
-                  <div class="fakultas-container">
-                    <div class="vector-parent20">
-                      <img
-                        class="vector-icon8"
-                        loading="lazy"
-                        alt=""
-                        src="./svg/vector-1.svg"
-                      />
-
-                      <div class="image">image</div>
+                <nav class="frame-parent48">
+                    <div class="nama-wrapper">
+                        <div class="nama" id="nama">Nama</div>
                     </div>
-                  </div>
-                  <div class="second-row">
-                    <div class="class-i-d">2203010343</div>
-                    <div class="nim">NIM</div>
-                    <div class="tryanda-anggita-suwito">
-                      TRYANDA ANGGITA SUWITO
+                    <div class="input-fields">
+                        <div class="fakultas-container">
+                            <div class="vector-parent20">
+                                <img
+                                  class="vector-icon8"
+                                  loading="lazy"
+                                  alt=""
+                                  src="./svg/vector-1.svg"
+                                />
+                                <div class="image">image</div>
+                            </div>
+                        </div>
+                        <div class="second-row">
+                            <div class="class-i-d" id="nim">NIM</div>
+                            <div class="nim">NIM</div>
+                            <div class="tryanda-anggita-suwito" id="student-name">
+                                Student Name
+                            </div>
+                            <div class="teguh-ikhlas-ramadhan" id="wali-dosen">
+                                Wali Dosen
+                            </div>
+                            <div class="faculty-box">
+                                <div class="faculty-info">
+                                    <div class="fakultas">Fakultas</div>
+                                    <div class="fakultas-teknik" id="fakultas">
+                                        Fakultas
+                                    </div>
+                                    <div class="program-studi1">Program Studi</div>
+                                </div>
+                                <div class="teknik-informatika" id="program-studi">
+                                    Program Studi
+                                </div>
+                                <div class="dosen-wali">Dosen Wali</div>
+                            </div>
+                            <div class="angkatanstatus">Angkatan/Status</div>
+                            <div class="aktif" id="angkatan">
+                                Angkatan
+                            </div>
+                        </div>
                     </div>
-                    <div class="teguh-ikhlas-ramadhan">
-                      Teguh Ikhlas Ramadhan  S.Kom., M.Kom.
-                    </div>
-                    <div class="faculty-box">
-                      <div class="faculty-info">
-                        <div class="fakultas">Fakultas</div>
-                        <div class="fakultas-teknik">FAKULTAS TEKNIK</div>
-                        <div class="program-studi1">Program Studi</div>
-                      </div>
-                      <div class="teknik-informatika">TEKNIK INFORMATIKA</div>
-                      <div class="dosen-wali">Dosen Wali</div>
-                    </div>
-                    <div class="angkatanstatus">Angkatan/Status</div>
-                    <div class="aktif">2019/Aktif</div>
-                  </div>
-                </div>
-              </nav>
+                </nav>
             </section>
             <div class="semester-info1">
-              <div class="semester0-wrapper">
-                <div class="semester0">SEMESTER:0</div>
-              </div>
-              <div class="kelasxx">KELAS:XX</div>
-              <div class="total-sks00-wrapper">
-                <div class="total-sks00">TOTAL SKS:00</div>
-              </div>
-              <div class="nilai-ipk00-wrapper">
-                <div class="nilai-ipk00">NILAI IPK:0.0</div>
-              </div>
+                <div class="semester0-wrapper">
+                    <div class="semester0">SEMESTER:0</div>
+                </div>
+                <div class="kelasxx">KELAS:XX</div>
+                <div class="total-sks00-wrapper">
+                    <div class="total-sks00">TOTAL SKS:00</div>
+                </div>
+                <div class="nilai-ipk00-wrapper">
+                    <div class="nilai-ipk00">NILAI IPK:0.0</div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
 
     <div id="framePopup" class="popup-overlay" style="display: none">
