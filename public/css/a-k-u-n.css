@@ -298,8 +298,8 @@
   min-width: 29px;
   z-index: 3;
 }
-.teguh-ikhlas-ramadhan,
-.tryanda-anggita-suwito {
+.dosen-name,
+.mahasiswa-name {
   position: absolute;
   top: 0;
   left: 0;
@@ -308,7 +308,7 @@
   width: 294.7px;
   z-index: 4;
 }
-.teguh-ikhlas-ramadhan {
+.dosen-name {
   top: 158px;
   left: 1px;
   width: 412.1px;
@@ -316,7 +316,7 @@
   z-index: 3;
 }
 .fakultas,
-.fakultas-teknik {
+.fakultas-name {
   position: relative;
   display: inline-block;
 }
@@ -327,7 +327,7 @@
   debug_commit: bf4bc93;
   z-index: 3;
 }
-.fakultas-teknik {
+.fakultas-name {
   align-self: stretch;
   height: 28.1px;
   font-size: var(--font-size-lg);
@@ -336,7 +336,7 @@
   margin-top: -5.6px;
 }
 .faculty-info,
-.fakultas-teknik,
+.fakultas-name,
 .program-studi1 {
   flex-shrink: 0;
   debug_commit: bf4bc93;
@@ -356,13 +356,13 @@
   justify-content: flex-start;
 }
 .dosen-wali,
-.teknik-informatika {
+.studi-name {
   position: relative;
   flex-shrink: 0;
   debug_commit: bf4bc93;
   margin-top: -1.2px;
 }
-.teknik-informatika {
+.studi-name {
   align-self: stretch;
   font-size: var(--font-size-lg);
   font-weight: 600;
@@ -505,6 +505,7 @@
 .vector-parent19 {
   display: flex;
   justify-content: flex-start;
+  
 }
 .semester-info1 {
   align-self: stretch;

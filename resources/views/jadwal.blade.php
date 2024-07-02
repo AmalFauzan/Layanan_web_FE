@@ -254,6 +254,6 @@
       </div>
     </div>
 
-    <script src="./js/nilai.js"></script>
+    <script src="./js/jadwal.js"></script>
   </body>
 </html>
