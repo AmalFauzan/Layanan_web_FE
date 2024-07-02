@@ -36,12 +36,12 @@
             <div class="frame-group">
                 <div class="simamik-wrapper">
                     <h1 class="simamik">
-                        <p class="simamik1">SIMAMIK</p>
+                        <div class="simamik1">SISKOMIK</div>
                     </h1>
                 </div>
                 <div class="system-info">
                     <div class="sistem-informasi-akademik">
-                        Sistem Informasi Akademik Universitas ABC
+                        SISTEM KELOLA AKADEMIK
                     </div>
                 </div>
                 <div class="frame-container">
@@ -63,7 +63,7 @@
                         />
                         <div class="frame-div">
                             <div class="login-wrapper">
-                                <h2 class="login1">LOGIN</h2>
+                                <h2 class="login1">LOGIN ADMIN</h2>
                             </div>
                             <div class="button-container-parent">
                                 <div class="button-container">
@@ -78,9 +78,9 @@
                                             <input
                                                 class="frame-child"
                                                 placeholder="username"
-                                                type="username"
-                                                name="username"
-                                                id="username" required>
+                                                type="email"
+                                                name="email"
+                                                id="email" required>
                                         </div>
                                     </div>
                                     <div class="input-border"></div>
@@ -120,48 +120,47 @@
         </div>
     </form>
 
-<script>
-    $(document).ready(function() {
-        $('#login-form').on('submit', function(event) {
-            event.preventDefault();
+    <script>
+        $(document).ready(function() {
+            $('#login-form').on('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
 
-            $('#error-messages').empty();
+                // Clear previous error messages
+                $('#error-messages').empty();
 
-            var username = $('#username').val();
-            var password = $('#password').val();
+                var email = $('#email').val();
+                var password = $('#password').val();
 
-            $.ajax({
-                url: 'http://127.0.0.1:8001/api/login',
-                method: 'POST',
-                data: {
-                    username: username,
-                    password: password
-                },
-                success: function(response) {
-                    if (response.status) {
-                        alert('Login successful!');
-                        // Store the student data in localStorage
-                        localStorage.setItem('student', JSON.stringify(response.student));
-                        // Redirect to the profile page
-                        window.location.href = '/dashboard';
-                    } else {
-                        $('#error-messages').html('<p>' + response.message + '</p>');
-                    }
-                },
-                error: function(xhr) {
-                    var errors = xhr.responseJSON.errors;
-                    var errorMessages = '';
-                    for (var key in errors) {
-                        if (errors.hasOwnProperty(key)) {
-                            errorMessages += '<p>' + errors[key] + '</p>';
+                $.ajax({
+                    url: 'http://127.0.0.1:8001/api/login',
+                    method: 'POST',
+                    data: {
+                        _token: $('input[name="_token"]').val(),
+                        email: email,
+                        password: password
+                    },
+                    success: function(response) {
+                        if (response.status) {
+                            alert('Login successful!');
+                            // Redirect to the dashboard
+                            window.location.href = '/dosen';
+                        } else {
+                            $('#error-messages').html('<p>' + response.message + '</p>');
                         }
+                    },
+                    error: function(xhr) {
+                        var errors = xhr.responseJSON.errors;
+                        var errorMessages = '';
+                        for (var key in errors) {
+                            if (errors.hasOwnProperty(key)) {
+                                errorMessages += '<p>' + errors[key] + '</p>';
+                            }
+                        }
+                        $('#error-messages').html(errorMessages);
                     }
-                    $('#error-messages').html(errorMessages);
-                }
+                });
             });
         });
-    });
-</script>
-
+    </script>
 </body>
 </html>

@@ -6,6 +6,30 @@
   display: none;
   max-width: 100%;
 }
+.error-container {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+  padding: 10px; /* Menambahkan sedikit padding untuk ruang dalam */
+  margin: 0;
+  border-radius: 5px;
+  font-family: inherit;
+  position: absolute; /* Menggunakan posisi absolute */
+  top: 240px; /* Mengatur posisi dari atas */
+  right: 120px; /* Mengatur posisi dari kanan */
+  z-index: 1000; /* Memastikan berada di atas elemen lain */
+  font-size: 15px; /* Mengatur ukuran font menjadi lebih kecil */
+}
+
+.error-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.error-container li {
+  margin: 5px 0;
+}
 .pngtreeuniversity-logo-png-68 {
   height: 355px;
   flex: 1;
