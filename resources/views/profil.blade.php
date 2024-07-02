@@ -97,7 +97,8 @@
             <section class="frame-section">
                 <nav class="frame-parent48">
                     <div class="nama-wrapper">
-                        <div class="nama" id="nama">Nama</div>
+                        <div class="name" id="nama">Nama</div>
+
                     </div>
                     <div class="input-fields">
                         <div class="fakultas-container">
@@ -114,21 +115,21 @@
                         <div class="second-row">
                             <div class="class-i-d" id="nim">NIM</div>
                             <div class="nim">NIM</div>
-                            <div class="tryanda-anggita-suwito" id="student-name">
+                            <div class="mahasiswa-name" id="student-name">
                                 Student Name
                             </div>
-                            <div class="teguh-ikhlas-ramadhan" id="wali-dosen">
+                            <div class="dosen-name" id="wali-dosen">
                                 Wali Dosen
                             </div>
                             <div class="faculty-box">
                                 <div class="faculty-info">
                                     <div class="fakultas">Fakultas</div>
-                                    <div class="fakultas-teknik" id="fakultas">
+                                    <div class="fakultas-name" id="fakultas">
                                         Fakultas
                                     </div>
                                     <div class="program-studi1">Program Studi</div>
                                 </div>
-                                <div class="teknik-informatika" id="program-studi">
+                                <div class="studi-name" id="program-studi">
                                     Program Studi
                                 </div>
                                 <div class="dosen-wali">Dosen Wali</div>
